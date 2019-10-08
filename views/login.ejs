@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome Back to Our Cool Site!</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <a href="/">Don't have an account?</a>
+    <form action="/login" method="post">
+        <label for="email">Email: </label>
+        <input type="email" name="email"><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="LOGIN">
+    </form>
+    <% if(messages.login) { %> 
+        <% for(var x of messages.login) { %>
+            <p><%= x %></p>
+        <% } %>
+    <% } %>
+</body>
+</html>

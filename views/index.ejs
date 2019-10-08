@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Cool Site</title>
+</head>
+<body>
+    <h1>Welcome to Our Cool Site</h1>
+    <h2>Register:</h2>
+    <a href="/login">Already have an account?</a>
+    <form action="/register" method="post">
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name"><br>
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name"><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password"><br>
+        <label for="birthdate">Birth Date: </label>
+        <input type="date" name="birthdate"><br>
+        <input type="submit" value="REGISTER">
+    </form>
+    <% if(messages.registration) { %>
+        <% for(var x of messages.registration) { %>
+            <p><%= x %></p>
+        <% } %>
+    <% } %>
+</body>
+</html>
